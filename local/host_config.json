@@ -1,6 +1,6 @@
 {
-    "token": "<evalai_user_auth_token>",
-    "team_pk": "<host_team_pk>",
-    "evalai_host_url": "http://localhost:8000",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0OTY1NzI0NSwianRpIjoiOGEwNTlkZWUzNmEyNDljNWIzNzg2MDYyNmUzNWVmOTIiLCJ1c2VyX2lkIjoyfQ.XOi7G2Nw4Gm1l9tHo36B8UYws3ZrDitFRCM6Q2jSaB8",
+    "team_pk": 2,
+    "evalai_host_url": "http://34.64.87.174:8000",
     "github_repo": "EvalAI-Starters"
 }
