@@ -55,29 +55,29 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
     #     # To display the results in the result file
     #     output["submission_result"] = output["result"][0]["train_split"]
     #     print("Completed evaluation for Dev Phase")
-    if phase_codename == "test":
-        rst_all, rst_day, rst_night = run(test_annotation_file, user_submission_file, 'test')
-        print("Evaluating for Test Phase")
-        output["result"] = [
-            # {
-            #     "train_split": {
-            #         "Metric1": random.randint(0, 99),
-            #         "Metric2": random.randint(0, 99),
-            #         "Metric3": random.randint(0, 99),
-            #         "Total": random.randint(0, 99),
-            #     }
-            # },
-            {
-                "test_split": {
-                    "All (MR-2)": rst_all,
-                    "Day (MR-2)": rst_day,
-                    "Night (MR-2)": rst_night,
-                }
-            },
-        ]
-        # To display the results in the result file
-        output["submission_result"] = output["result"][0]
-        print("Completed evaluation for Test Phase")
-    else:
-        print("Unknown phase_codename")
+    # if phase_codename == "test":
+    rst_all, rst_day, rst_night = run(test_annotation_file, user_submission_file, 'test')
+    print("Evaluating for Test Phase")
+    output["result"] = [
+        # {
+        #     "train_split": {
+        #         "Metric1": random.randint(0, 99),
+        #         "Metric2": random.randint(0, 99),
+        #         "Metric3": random.randint(0, 99),
+        #         "Total": random.randint(0, 99),
+        #     }
+        # },
+        {
+            "test_split": {
+                "All (MR-2)": rst_all,
+                "Day (MR-2)": rst_day,
+                "Night (MR-2)": rst_night,
+            }
+        },
+    ]
+    # To display the results in the result file
+    output["submission_result"] = output["result"][0]
+    print("Completed evaluation for Test Phase")
+    # else:
+    #     print("Unknown phase_codename")
     return output

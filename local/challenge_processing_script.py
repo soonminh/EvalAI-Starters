@@ -47,6 +47,7 @@ if __name__ == "__main__":
         CHALLENGE_CONFIG_VALIDATION_URL.format(CHALLENGE_HOST_TEAM_PK),
     )
     try:
+        import ipdb; ipdb.set_trace()
         response = requests.post(url, data=data, headers=headers, files=file)
 
         if (
@@ -86,6 +87,7 @@ if __name__ == "__main__":
     zip_file = open(CHALLENGE_ZIP_FILE_PATH, "rb")
     file = {"zip_configuration": zip_file}
     try:
+        import ipdb; ipdb.set_trace()
         response = requests.post(url, data=data, headers=headers, files=file)
 
         if (
