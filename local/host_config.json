@@ -1,6 +1,6 @@
 {
-    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0OTY1NzI0NSwianRpIjoiOGEwNTlkZWUzNmEyNDljNWIzNzg2MDYyNmUzNWVmOTIiLCJ1c2VyX2lkIjoyfQ.XOi7G2Nw4Gm1l9tHo36B8UYws3ZrDitFRCM6Q2jSaB8",
-    "team_pk": 2,
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0OTcwNzc3MiwianRpIjoiZGVkZTlhMTlhNWI4NGFhMTlkOTNmYjc2ZTIwNzAzMTgiLCJ1c2VyX2lkIjo0fQ.xuVa8OzM5uBxywx7OKbV6pU99QE3YOVfrVSx1XP4qnk",
+    "team_pk": 3,
     "evalai_host_url": "http://34.64.87.174:8000",
-    "github_repo": "EvalAI-Starters"
+    "github_repo": "https://github.com/soonminh/EvalAI-Starters"
 }

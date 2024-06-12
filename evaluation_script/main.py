@@ -1,5 +1,5 @@
 import random
-
+from .evaluation_script import evaluate as run_eval
 
 def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwargs):
     print("Starting Evaluation.....")
@@ -40,39 +40,31 @@ def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwarg
         }
     """
     output = {}
-    if phase_codename == "dev":
-        print("Evaluating for Dev Phase")
-        output["result"] = [
-            {
-                "train_split": {
-                    "Metric1": random.randint(0, 99),
-                    "Metric2": random.randint(0, 99),
-                    "Metric3": random.randint(0, 99),
-                    "Total": random.randint(0, 99),
-                }
-            }
-        ]
-        # To display the results in the result file
-        output["submission_result"] = output["result"][0]["train_split"]
-        print("Completed evaluation for Dev Phase")
-    elif phase_codename == "test":
+    # if phase_codename == "dev":
+    #     print("Evaluating for Dev Phase")
+    #     output["result"] = [
+    #         {
+    #             "train_split": {
+    #                 "All (MR-2)": random.randint(0, 99),
+    #                 "Day (MR-2)": random.randint(0, 99),
+    #                 "Night (MR-2)": random.randint(0, 99),
+    #             }
+    #         }
+    #     ]
+    #     # To display the results in the result file
+    #     output["submission_result"] = output["result"][0]["train_split"]
+    #     print("Completed evaluation for Dev Phase")
+    if phase_codename == "test":
         print("Evaluating for Test Phase")
+
+        metrics = run_eval(test_annotation_file, user_submission_file, phase_codename)
+
         output["result"] = [
+            # {
+            #     "train_split": metrics
+            # },
             {
-                "train_split": {
-                    "Metric1": random.randint(0, 99),
-                    "Metric2": random.randint(0, 99),
-                    "Metric3": random.randint(0, 99),
-                    "Total": random.randint(0, 99),
-                }
-            },
-            {
-                "test_split": {
-                    "Metric1": random.randint(0, 99),
-                    "Metric2": random.randint(0, 99),
-                    "Metric3": random.randint(0, 99),
-                    "Total": random.randint(0, 99),
-                }
+                "test_split": metrics
             },
         ]
         # To display the results in the result file
